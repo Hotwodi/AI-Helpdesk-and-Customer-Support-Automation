@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Tree View -->
+        <record id="hsa_sla_monitor_view_tree" model="ir.ui.view">
+            <field name="name">hsa.sla.monitor.view.tree</field>
+            <field name="model">hsa.sla.monitor</field>
+            <field name="arch" type="xml">
+                <tree string="SLA Monitors">
+                    <field name="name"/>
+                    <field name="ticket_id"/>
+                    <field name="sla_type"/>
+                    <field name="target_hours"/>
+                    <field name="actual_hours"/>
+                    <field name="breach"/>
+                    <field name="ai_risk_score"/>
+                    <field name="state" widget="badge"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="hsa_sla_monitor_view_form" model="ir.ui.view">
+            <field name="name">hsa.sla.monitor.view.form</field>
+            <field name="model">hsa.sla.monitor</field>
+            <field name="arch" type="xml">
+                <form string="SLA Monitor">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" string="Name"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="ticket_id"/>
+                                <field name="sla_type"/>
+                                <field name="state" widget="badge"/>
+                            </group>
+                            <group>
+                                <field name="target_hours"/>
+                                <field name="actual_hours"/>
+                                <field name="breach"/>
+                                <field name="ai_risk_score"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="hsa_sla_monitor_action" model="ir.actions.act_window">
+            <field name="name">SLA Monitor</field>
+            <field name="res_model">hsa.sla.monitor</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new SLA monitor record
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Tree View -->
+        <record id="hsa_knowledge_article_view_tree" model="ir.ui.view">
+            <field name="name">hsa.knowledge.article.view.tree</field>
+            <field name="model">hsa.knowledge.article</field>
+            <field name="arch" type="xml">
+                <tree string="Knowledge Base Articles">
+                    <field name="name"/>
+                    <field name="category"/>
+                    <field name="tags"/>
+                    <field name="ai_relevance_score"/>
+                    <field name="view_count"/>
+                    <field name="helpful_count"/>
+                    <field name="created_by"/>
+                    <field name="last_updated"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="hsa_knowledge_article_view_form" model="ir.ui.view">
+            <field name="name">hsa.knowledge.article.view.form</field>
+            <field name="model">hsa.knowledge.article</field>
+            <field name="arch" type="xml">
+                <form string="Knowledge Base Article">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_increment_view" type="object" string="View"
+                                    class="oe_stat_button" icon="fa-eye">
+                                <field name="view_count" widget="statinfo"/>
+                            </button>
+                            <button name="action_mark_helpful" type="object" string="Helpful"
+                                    class="oe_stat_button" icon="fa-thumbs-up">
+                                <field name="helpful_count" widget="statinfo"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name" string="Title"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="category"/>
+                                <field name="tags"/>
+                                <field name="active"/>
+                            </group>
+                            <group>
+                                <field name="ai_relevance_score"/>
+                                <field name="created_by"/>
+                                <field name="last_updated"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Content" name="content">
+                                <field name="content"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="hsa_knowledge_article_action" model="ir.actions.act_window">
+            <field name="name">Knowledge Base</field>
+            <field name="res_model">hsa.knowledge.article</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new knowledge base article
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Root Menu -->
+        <menuitem id="menu_hsa_root"
+                  name="Helpdesk Automation"
+                  sequence="10"
+                  web_icon="ai_helpdesk_customer_support_automation,static/description/icon.png"/>
+
+        <!-- Sub Menus -->
+        <menuitem id="menu_hsa_tickets"
+                  name="Tickets"
+                  parent="menu_hsa_root"
+                  sequence="10"
+                  action="hsa_ticket_action"/>
+
+        <menuitem id="menu_hsa_auto_responses"
+                  name="Auto Responses"
+                  parent="menu_hsa_root"
+                  sequence="20"
+                  action="hsa_auto_response_action"/>
+
+        <menuitem id="menu_hsa_sla_monitor"
+                  name="SLA Monitor"
+                  parent="menu_hsa_root"
+                  sequence="30"
+                  action="hsa_sla_monitor_action"/>
+
+        <menuitem id="menu_hsa_knowledge_base"
+                  name="Knowledge Base"
+                  parent="menu_hsa_root"
+                  sequence="40"
+                  action="hsa_knowledge_article_action"/>
+
+        <menuitem id="menu_hsa_support_analytics"
+                  name="Support Analytics"
+                  parent="menu_hsa_root"
+                  sequence="50"
+                  action="hsa_support_analytics_action"/>
+    </data>
+</odoo>

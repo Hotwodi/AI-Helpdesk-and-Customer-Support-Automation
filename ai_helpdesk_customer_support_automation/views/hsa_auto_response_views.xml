@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Tree View -->
+        <record id="hsa_auto_response_view_tree" model="ir.ui.view">
+            <field name="name">hsa.auto.response.view.tree</field>
+            <field name="model">hsa.auto.response</field>
+            <field name="arch" type="xml">
+                <tree string="AI Auto-Responses">
+                    <field name="name"/>
+                    <field name="trigger_keyword"/>
+                    <field name="category"/>
+                    <field name="ai_confidence"/>
+                    <field name="auto_send"/>
+                    <field name="active"/>
+                    <field name="usage_count"/>
+                    <field name="success_rate"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="hsa_auto_response_view_form" model="ir.ui.view">
+            <field name="name">hsa.auto.response.view.form</field>
+            <field name="model">hsa.auto.response</field>
+            <field name="arch" type="xml">
+                <form string="AI Auto-Response">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" string="Name"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="trigger_keyword"/>
+                                <field name="category"/>
+                                <field name="auto_send"/>
+                                <field name="active"/>
+                            </group>
+                            <group>
+                                <field name="ai_confidence"/>
+                                <field name="usage_count"/>
+                                <field name="success_rate"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Response Template" name="response_template">
+                                <field name="response_template"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="hsa_auto_response_action" model="ir.actions.act_window">
+            <field name="name">AI Auto-Responses</field>
+            <field name="res_model">hsa.auto.response</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new AI auto-response template
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

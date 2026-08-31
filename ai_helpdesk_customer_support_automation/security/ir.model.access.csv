@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hsa_ticket_user,hsa.ticket.user,model_hsa_ticket,base.group_user,1,1,1,1
+access_hsa_auto_response_user,hsa.auto.response.user,model_hsa_auto_response,base.group_user,1,1,1,1
+access_hsa_sla_monitor_user,hsa.sla.monitor.user,model_hsa_sla_monitor,base.group_user,1,1,1,1
+access_hsa_knowledge_article_user,hsa.knowledge.article.user,model_hsa_knowledge_article,base.group_user,1,1,1,1
+access_hsa_support_analytics_user,hsa.support.analytics.user,model_hsa_support_analytics,base.group_user,1,1,1,1

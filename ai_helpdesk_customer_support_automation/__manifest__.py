@@ -1,6 +1,7 @@
 {
     'name': 'AI Helpdesk & Customer Support Automation',
     'version': '18.0.1.0.0',
+    'images': ['static/description/cover.png'],
     'summary': 'AI-powered helpdesk ticketing, auto-responses, SLA monitoring, '
                'knowledge base, and support analytics.',
     'description': """

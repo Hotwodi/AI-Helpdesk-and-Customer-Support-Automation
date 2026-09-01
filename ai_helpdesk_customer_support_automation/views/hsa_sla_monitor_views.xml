@@ -6,7 +6,7 @@
             <field name="name">hsa.sla.monitor.view.tree</field>
             <field name="model">hsa.sla.monitor</field>
             <field name="arch" type="xml">
-                <tree string="SLA Monitors">
+                <list string="SLA Monitors">
                     <field name="name"/>
                     <field name="ticket_id"/>
                     <field name="sla_type"/>
@@ -15,7 +15,7 @@
                     <field name="breach"/>
                     <field name="ai_risk_score"/>
                     <field name="state" widget="badge"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -52,7 +52,7 @@
         <record id="hsa_sla_monitor_action" model="ir.actions.act_window">
             <field name="name">SLA Monitor</field>
             <field name="res_model">hsa.sla.monitor</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create a new SLA monitor record

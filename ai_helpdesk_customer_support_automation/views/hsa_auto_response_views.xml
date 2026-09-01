@@ -6,7 +6,7 @@
             <field name="name">hsa.auto.response.view.tree</field>
             <field name="model">hsa.auto.response</field>
             <field name="arch" type="xml">
-                <tree string="AI Auto-Responses">
+                <list string="AI Auto-Responses">
                     <field name="name"/>
                     <field name="trigger_keyword"/>
                     <field name="category"/>
@@ -15,7 +15,7 @@
                     <field name="active"/>
                     <field name="usage_count"/>
                     <field name="success_rate"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -57,7 +57,7 @@
         <record id="hsa_auto_response_action" model="ir.actions.act_window">
             <field name="name">AI Auto-Responses</field>
             <field name="res_model">hsa.auto.response</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create a new AI auto-response template

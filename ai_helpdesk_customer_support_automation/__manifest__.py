@@ -19,7 +19,7 @@ Comprehensive AI-driven customer support suite for Odoo:
     'website': 'https://softaidev.pages.dev',
     'category': 'Productivity/AI',
     'license': 'LGPL-3',
-    'price': 80.00,
+    'price': 79.99,
     'currency': 'USD',
     'depends': ['base', 'web', 'mail'],
     'application': True,
